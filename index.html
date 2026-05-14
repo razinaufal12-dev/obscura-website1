@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>OBSCURA | Physics • Astronomy • Space-Time</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-theme="dark">
+<div class="stars-bg"></div>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo-area">
+            <div class="logo-img">
+                <img src="assets/images/logo-obscura.png" alt="OBSCURA Logo" id="channelLogo" onerror="this.src='https://via.placeholder.com/52?text=O'">
+            </div>
+            <div class="logo-text">O B S C U R A</div>
+        </div>
+        <div class="nav-links">
+            <a href="#" data-page="home" class="active">🏠 Beranda</a>
+            <a href="#" data-page="discussion">🎙️ Voice Call</a>
+            <a href="#" data-page="products">🛍️ Produk</a>
+            <a href="#" data-page="contact">📞 Kontak</a>
+            <button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+            <a href="https://www.youtube.com/channel/UC5QEtvugyolsHEs1bQiyQ2w" target="_blank" class="btn-youtube">
+                <img src="assets/images/youtube-icon.png" alt="YouTube" class="youtube-icon-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1384/1384060.png'">
+                Subscribe
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- HALAMAN BERANDA -->
+    <div id="homePage" class="page-content active-page">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge"><i class="fas fa-atom"></i> Physics • Astronomy • Space-Time</div>
+                    <h1>Menjelajah <span class="text-blue">Alam Semesta</span><br>dari Hitam hingga Relativitas</h1>
+                    <p class="hero-desc">Membahas fisika, astronomi, dan konsep kosmos secara sederhana, visual, dan mendalam.</p>
+                    <div class="hero-stats">
+                        <div class="stat"><i class="fas fa-chalkboard-user"></i> <span>Konten Edukatif</span></div>
+                        <div class="stat"><i class="fas fa-chart-line"></i> <span>Visual Modern</span></div>
+                        <div class="stat"><i class="fas fa-globe"></i> <span>Astronomi & Fisika</span></div>
+                    </div>
+                    <a href="https://www.youtube.com/channel/UC5QEtvugyolsHEs1bQiyQ2w" target="_blank" class="btn-youtube btn-blue">
+                        <img src="assets/images/youtube-icon.png" alt="YouTube" class="youtube-icon-img">
+                        Kunjungi Channel
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/blackhole-illustration.webp" alt="Black Hole" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3011/3011272.png'">
+                </div>
+            </div>
+        </section>
+
+        <section class="description-section">
+            <div class="container">
+                <div class="card-glow">
+                    <div class="desc-text"><i class="fas fa-quote-left"></i> <strong>OBSCURA</strong> membahas <span class="highlight">fisika, astronomi, dan berbagai konsep tentang alam semesta</span> secara sederhana, visual, dan mendalam.</div>
+                    <div class="desc-text">Di channel ini, kamu akan menemukan pembahasan tentang <strong class="highlight">black hole, ruang-waktu, relativitas, kosmologi, fenomena astronomi</strong>.</div>
+                    <div class="topic-tags">
+                        <span class="tag"><i class="fas fa-star-of-life"></i> Black Hole</span>
+                        <span class="tag"><i class="fas fa-hourglass-half"></i> Ruang-Waktu</span>
+                        <span class="tag"><i class="fas fa-charging-station"></i> Relativitas</span>
+                        <span class="tag"><i class="fas fa-meteor"></i> Kosmologi</span>
+                        <span class="tag"><i class="fas fa-moon"></i> Astronomi</span>
+                    </div>
+                    <div class="quote-footer">Physics • Astronomy • Space-Time</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- HALAMAN VOICE CALL -->
+    <div id="discussionPage" class="page-content">
+        <div class="container" style="padding: 30px 0;">
+            <div class="discussion-header">
+                <h2><i class="fas fa-headset"></i> Voice Call Group</h2>
+                <p>Pilih materi, buat group call SML (5 orang) atau BDL (admin only), lalu diskusi suara dengan peserta lain.</p>
+                <div class="user-info-bar">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="displayUserName">Pengguna</span>
+                    <button id="editUserNameBtn" class="edit-name-btn"><i class="fas fa-pen"></i> Ganti Nama</button>
+                </div>
+                <p class="admin-hint"><i class="fas fa-crown"></i> <strong>Mode Admin:</strong> Klik logo OBSCURA 5 kali untuk membuat BDL</p>
+            </div>
+
+            <div class="voice-container">
+                <!-- 2 Kolom: Peserta (kiri) + Chat (kanan) -->
+                <div class="voice-grid">
+                    <!-- Kolom Kiri: Display Person -->
+                    <div class="participants-panel">
+                        <div class="panel-title">
+                            <i class="fas fa-users"></i> Peserta Diskusi
+                            <span id="participantCount" class="count-badge">0</span>
+                        </div>
+                        <div id="participantsGrid" class="participants-grid">
+                            <div class="empty-participants">
+                                <i class="fas fa-microphone-slash"></i>
+                                <p>Belum ada peserta</p>
+                                <span>Buat atau gabung group call</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Kanan: Chat -->
+                    <div class="chat-panel">
+                        <div class="panel-title">
+                            <i class="fas fa-comment-dots"></i> Chat Diskusi
+                        </div>
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message system">
+                                <div class="msg-user">💬 Sistem</div>
+                                <div class="msg-text">Selamat datang! Pilih materi, lalu buat atau gabung group call.</div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="chatInput" placeholder="Tulis pesan...">
+                            <button id="sendMsgBtn"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel Bawah: Pilih Materi + Group Call -->
+                <div class="control-panel">
+                    <!-- Pilih Materi -->
+                    <div class="control-box">
+                        <div class="control-label"><i class="fas fa-book"></i> Pilih Materi</div>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchMateri" placeholder="Cari materi...">
+                        </div>
+                        <div id="materiChips" class="materi-chips"></div>
+                    </div>
+
+                    <!-- Group Call Aktif -->
+                    <div class="control-box">
+                        <div class="control-label"><i class="fas fa-users"></i> Group Call Aktif</div>
+                        <div id="activeGroupsList" class="groups-list">
+                            <div class="empty-groups">Pilih materi terlebih dahulu</div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Buat Group -->
+                    <div class="control-box">
+                        <div class="control-label"><i class="fas fa-plus-circle"></i> Buat Group Call</div>
+                        <button id="createSMLBtn" class="btn-sml"><i class="fas fa-users"></i> Buat SML (5 orang)</button>
+                        <button id="createBDLBtn" class="btn-bdl" disabled><i class="fas fa-crown"></i> Buat BDL (Admin Only)</button>
+                        <button id="leaveCallBtn" class="btn-leave" style="display: none;"><i class="fas fa-phone-slash"></i> Tinggalkan Panggilan</button>
+                        <div id="adminNote" class="admin-note-small" style="display: none;">⭐ Mode Admin aktif</div>
+                    </div>
+                </div>
+
+                <!-- Jitsi Meet Video Call -->
+                <div class="jitsi-section" id="jitsiSection" style="display: none;">
+                    <div class="jitsi-header">
+                        <span><i class="fas fa-video"></i> Video Call (Jitsi Meet)</span>
+                        <button id="closeJitsiBtn" class="close-jitsi"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div id="jitsiFrameWrapper" style="width: 100%; height: 400px; border-radius: 16px; overflow: hidden;"></div>
+                    <div class="jitsi-controls">
+                        <input type="text" id="jitsiRoomName" placeholder="Nama ruangan (opsional)" class="jitsi-input">
+                        <button id="startJitsiBtn" class="btn-jitsi"><i class="fas fa-video"></i> Mulai Video Call (Bisa Bicara)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HALAMAN PRODUK -->
+    <div id="productsPage" class="page-content">
+        <div class="container" style="padding: 40px 0;">
+            <div class="products-header">
+                <h2><i class="fas fa-tshirt"></i> Official Merchandise</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-img">👕</div>
+                    <h3>Cosmic Hoodie</h3>
+                    <div class="price">Rp 349.000</div>
+                    <button class="btn-buy" data-name="Cosmic Hoodie" data-price="349000">Beli</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-img">👚</div>
+                    <h3>Event Horizon Tee</h3>
+                    <div class="price">Rp 189.000</div>
+                    <button class="btn-buy" data-name="Event Horizon Tee" data-price="189000">Beli</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Limited</div>
+                    <div class="product-img">🧢</div>
+                    <h3>Space-Time Cap</h3>
+                    <div class="price">Rp 149.000</div>
+                    <button class="btn-buy" data-name="Space-Time Cap" data-price="149000">Beli</button>
+                </div>
+            </div>
+            <div class="cart-container">
+                <div class="cart-header" onclick="toggleCart()">
+                    <span><i class="fas fa-shopping-cart"></i> Keranjang <span id="cartCount">(0)</span></span>
+                    <i class="fas fa-chevron-down" id="cartIcon"></i>
+                </div>
+                <div class="cart-body" id="cartBody">
+                    <div id="cartItems">Keranjang kosong</div>
+                    <div class="cart-total">Total: <span id="cartTotal">Rp 0</span></div>
+                    <button id="checkoutBtn" class="btn-checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HALAMAN KONTAK -->
+    <div id="contactPage" class="page-content">
+        <div class="container">
+            <div class="contact-card">
+                <h2><i class="fas fa-address-card"></i> Hubungi OBSCURA</h2>
+                <div class="contact-grid">
+                    <div class="contact-item"><i class="fas fa-envelope"></i><h4>Email</h4><p>obscura@science.id</p></div>
+                    <div class="contact-item"><i class="fab fa-instagram"></i><h4>Instagram</h4><p>@obscura.cosmos</p></div>
+                    <div class="contact-item"><i class="fab fa-youtube"></i><h4>YouTube</h4><p>/Obscura</p></div>
+                    <div class="contact-item"><i class="fab fa-discord"></i><h4>Discord</h4><p>Komunitas</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modal -->
+<div id="nameModal" class="modal">
+    <div class="modal-box">
+        <div class="modal-header"><h3>Ganti Nama</h3><span class="close-modal">&times;</span></div>
+        <div class="modal-body">
+            <input type="text" id="newUserName" placeholder="Nama Anda" class="modal-input">
+            <button id="saveNameBtn" class="modal-btn">Simpan</button>
+        </div>
+    </div>
+</div>
+
+<div id="checkoutModal" class="modal">
+    <div class="modal-box">
+        <div class="modal-header"><h3>Checkout</h3><span class="close-modal">&times;</span></div>
+        <div class="modal-body">
+            <div id="checkoutSummary"></div>
+            <input type="text" id="custName" placeholder="Nama" class="modal-input">
+            <input type="text" id="custPhone" placeholder="No. WA" class="modal-input">
+            <button id="confirmOrderBtn" class="modal-btn">Kirim Pesanan</button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 OBSCURA — Physics, Astronomy & Space Exploration</p>
+    </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
